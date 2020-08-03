@@ -18,9 +18,10 @@ public class TodoData {
     // == constructors ==
     public TodoData(){
         // add some dummy data using the addItem method so it setst the id field
-        addItems(new TodoItem("first", "first details", LocalDate.now()));
-        addItems(new TodoItem("second", "second details", LocalDate.now()));
-        addItems(new TodoItem("third", "third details", LocalDate.now()));
+        addItem(new TodoItem("first", "first details", LocalDate.now()));
+        addItem(new TodoItem("second", "second details", LocalDate.now()));
+        addItem(new TodoItem("third", "third details", LocalDate.now()));
+        addItem(new TodoItem("fourth", "fourth details", LocalDate.now()));
     }
 
     //== public methods ==
@@ -28,7 +29,7 @@ public class TodoData {
         return Collections.unmodifiableList(items);
     }
 
-    public void addItems(@NonNull TodoItem toAdd){
+    public void addItem(@NonNull TodoItem toAdd){
         //if(toAdd == null){
             //throw new NullPointerException("toAdd is a required parameter");
         //}
